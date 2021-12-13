@@ -519,4 +519,8 @@ span:first-of-type {
     margin: 0 auto;
     justify-self: center;
   }
+
+  .slide img {
+    max-width: 300px;
+  }
 }

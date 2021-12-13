@@ -34,4 +34,14 @@ slides.forEach((slide, index) => {
   slide.addEventListener("mousemove", touchMove);
 });
 
-function touchStart(index)
+function touchStart(index) {
+  return function (event) {
+    console.log("start");
+  };
+}
+
+function touchEnd() {
+  return function (event) {
+    console.log("start");
+  };
+}
