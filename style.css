@@ -279,8 +279,16 @@ footer .grid-col-3 * {
 
 .slide {
   max-height: 100vh;
-  width: 100vh;
+  width: 100vw;
   user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide span {
+  margin: 1rem 0;
 }
 
 .grabbing {
@@ -498,6 +506,10 @@ span:first-of-type {
     justify-content: space-between;
   }
 
+  section {
+    padding: 2rem 0;
+  }
+
   .navbar ul {
     display: none;
   }
@@ -520,7 +532,8 @@ span:first-of-type {
     justify-self: center;
   }
 
-  .slide img {
-    max-width: 300px;
+  .slide img,
+  .slide p {
+    max-width: 250px;
   }
 }
