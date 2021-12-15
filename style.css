@@ -512,10 +512,11 @@ span:first-of-type {
 }
 
 .restaurantName {
-  text-align: center;
+  color: var(--color-light);
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 20%;
+  top: 60%;
+  font-size: 2rem;
 }
 
 /* MEDIA QUERIES */
