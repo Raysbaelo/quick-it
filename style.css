@@ -580,15 +580,22 @@ span:first-of-type {
   }
 }
 
+@media (min-width: 700px) {
+  .grid-col-3 {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+/* @media (max-width: 700px) {
+  .hide {
+    display: none;
+  } */
+
 /*******REVIEW******/
 
 .review {
   position: relative;
-}
-
-.img_review {
-  display: block;
-  width: 100%;
+  margin: 3rem;
 }
 
 .img_overlay {
@@ -619,3 +626,28 @@ span:first-of-type {
 .img_overlay h4 {
   font-size: 1.5rem;
 }
+
+/* .carosel {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.carosel .review {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.review img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+/* .carusel-button {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+} */

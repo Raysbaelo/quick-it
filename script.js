@@ -21,7 +21,6 @@ const stepB = document.getElementById("stepB");
 const stepC = document.getElementById("stepC");
 const stepD = document.getElementById("stepD");
 
-
 function getStepA() {
   stepA.classList.remove("hideme");
   stepA.classList.add("z-index");
