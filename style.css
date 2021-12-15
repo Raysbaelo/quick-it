@@ -530,10 +530,6 @@ span:first-of-type {
     display: block;
   }
 
-  .logo {
-    padding-left: 2rem;
-  }
-
   .navbar {
     border: none;
     box-shadow: none;
