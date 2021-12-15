@@ -493,6 +493,8 @@ span:first-of-type {
   position: relative;
   width: fit-content;
   display: inline-block;
+  background: black;
+  overflow: hidden;
 }
 
 .restaurantBackground {
@@ -500,12 +502,13 @@ span:first-of-type {
   width: 15rem;
   height: 30rem;
   object-fit: cover;
+  opacity: 0.4;
 }
 .restaurantLogo {
   position: absolute;
-  width: 100px;
-  left: 50%;
-  top: 50%;
+  width: 10rem;
+  left: 20%;
+  top: 30%;
 }
 
 .restaurantName {
