@@ -21,6 +21,8 @@ const customMarker = {
   anchor: new google.maps.Point(15, 30),
 };
 
+var openedMarker;
+
 function showRestaurant(restaurant) {
   addToMap();
   console.log(restaurant.id);
@@ -52,17 +54,20 @@ function showRestaurant(restaurant) {
     var img = document.createElement("img");
     img.src = `http://agata.dk/qui/${restaurant.id}.png`;
     img.style.width = "40%";
+    img.style.height - "auto";
+    img.style.margin = "1rem";
     infowincontent.appendChild(img);
 
     var infowindiv = document.createElement("div");
     infowindiv.style.display = "flex";
     infowindiv.style.flexDirection = "column";
-    // infowindiv.style.margin = "1rem";
+    //infowindiv.style.margin = "2rem";
     infowincontent.appendChild(infowindiv);
 
     var name = document.createElement("h2");
     name.textContent = restaurant.title.rendered;
     name.style.color = "white";
+    //name.style.margin = "1rem";
     infowindiv.appendChild(name);
 
     var address = document.createElement("p");
@@ -73,8 +78,12 @@ function showRestaurant(restaurant) {
     (function (marker) {
       // add click event
       google.maps.event.addListener(marker, "click", function () {
+        if (openedMarker) {
+          openedMarker.close();
+        }
         infoWindow.setContent(infowincontent);
         infoWindow.open(map, marker);
+        openedMarker = infoWindow;
       });
     })(marker);
   }

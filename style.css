@@ -227,6 +227,10 @@ header {
   margin-bottom: 30px;
 }
 
+.gm-style-iw-d {
+  overflow: hidden !important;
+}
+
 /* GRID STYLES */
 .grid-col-2 {
   display: grid;
