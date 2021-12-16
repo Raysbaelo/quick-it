@@ -325,6 +325,7 @@ footer .grid-col-3 * {
   background-color: var(--color-light);
   border-radius: 25px;
   padding: 20px;
+  margin-bottom: 2rem;
 }
 
 .hideme {
