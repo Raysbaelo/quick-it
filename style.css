@@ -507,7 +507,7 @@ span:first-of-type {
 
 .restaurantBackground {
   position: relative;
-  width: 15rem;
+  width: auto;
   height: 30rem;
   object-fit: cover;
   opacity: 0.4;
