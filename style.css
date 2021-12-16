@@ -64,7 +64,7 @@ textarea {
   border-radius: 10px;
   padding: 6px 10px;
   margin-bottom: 10px;
-  width: 300px;
+  width: 400px;
   font-family: "Poppins";
 }
 
@@ -236,6 +236,10 @@ header {
   gap: 1.5rem;
   align-items: center;
   justify-content: space-between;
+}
+
+.bg-primary .grid-col-2 {
+  justify-content: center;
 }
 
 article.grid-col-2 {
