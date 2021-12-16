@@ -31,7 +31,6 @@ function showRestaurant(restaurant) {
   clone.querySelector(".restaurantBackground").src =
     restaurant._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
   clone.querySelector(".restaurantLogo").src = `http://agata.dk/qui/${restaurant.id}.png`;
-  console.log(`http://agata.dk/qui/${restaurant.id}.png`);
   // clone.querySelector(".restaurantName").textContent = restaurant.title.rendered;
 
   const parent = document.querySelector(".restaurantGrid");
@@ -44,13 +43,38 @@ function showRestaurant(restaurant) {
       map: map,
       icon: customMarker,
     });
+    var infoWindow = new google.maps.InfoWindow();
+    var infowincontent = document.createElement("a");
+    infowincontent.href = restaurant.website;
+    infowincontent.style.display = "flex";
+    infowincontent.style.backgroundColor = "#006462";
+
+    var img = document.createElement("img");
+    img.src = `http://agata.dk/qui/${restaurant.id}.png`;
+    img.style.width = "40%";
+    infowincontent.appendChild(img);
+
+    var infowindiv = document.createElement("div");
+    infowindiv.style.display = "flex";
+    infowindiv.style.flexDirection = "column";
+    // infowindiv.style.margin = "1rem";
+    infowincontent.appendChild(infowindiv);
+
+    var name = document.createElement("h2");
+    name.textContent = restaurant.title.rendered;
+    name.style.color = "white";
+    infowindiv.appendChild(name);
+
+    var address = document.createElement("p");
+    address.textContent = restaurant.address;
+    address.style.color = "white";
+    infowindiv.appendChild(address);
+
     (function (marker) {
       // add click event
       google.maps.event.addListener(marker, "click", function () {
-        infowindow = new google.maps.InfoWindow({
-          content: restaurant.title.rendered,
-        });
-        infowindow.open(map, marker);
+        infoWindow.setContent(infowincontent);
+        infoWindow.open(map, marker);
       });
     })(marker);
   }
