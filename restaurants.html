@@ -47,6 +47,20 @@
             </div>
       </div>
     </header>
+    <main>
+      <div id="map">
+        <!-- map here -->
+      </div>
+      <div class="restaurantGrid">
+        <template>
+          <a class="restaurant">
+            <img class="restaurantBackground" src="">
+            <img class="restaurantLogo" src="">
+            <!-- <p class="restaurantName"></p> -->
+          </a>
+        </template>
+      </div>
+    </main>
       <footer class="bg-primary">
         <div class="grid-col-3">
             <div>
@@ -79,5 +93,8 @@
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWg75ptIObm44iPzysfklYTOzrGeYoXzU&callback=initMap&libraries=&v=weekly"
+    ></script>
+    <script src="restaurants.js"></script>
     </body>
