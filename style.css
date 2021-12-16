@@ -285,6 +285,10 @@ article.grid-col-2 {
   justify-self: center;
 }
 
+.box-d .grid-col-3 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
 .box-d .grid-col-3 img {
   max-width: 200px;
   margin: 0 auto;
