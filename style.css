@@ -63,6 +63,10 @@ i {
   color: #fff;
 }
 
+video {
+  max-width: 100%;
+}
+
 input:not(input.btn),
 textarea {
   background-color: #e0edec;

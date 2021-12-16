@@ -1,3 +1,6 @@
+// video play
+document.querySelector("video").play();
+
 // burger menu
 const btn = document.getElementById("menu-btn");
 const nav = document.getElementById("menu");
