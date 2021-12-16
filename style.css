@@ -30,8 +30,13 @@ ul {
   list-style: none;
 }
 
-h1 {
+h1,
+h2 {
   font-size: 2rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
 }
 
 p {
@@ -92,8 +97,9 @@ article.box-text section p {
 
 figcaption {
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.7rem;
   text-align: center;
+  margin-top: 1rem;
 }
 /* NAVBAR */
 header {
@@ -165,12 +171,16 @@ header {
 /* BOX */
 
 .box-a img,
-.box-e img,
 .box-text {
   max-width: 500px;
   margin: 0 auto;
   justify-self: center;
   /* padding: 20px 0; */
+}
+
+.box-e img {
+  max-width: 350px;
+  place-self: center;
 }
 
 .box-text p,
@@ -188,9 +198,7 @@ header {
 }
 
 .box-b h2 {
-  grid-column: 1/-1;
-  font-size: 2rem;
-  margin: 0 auto;
+  text-align: center;
 }
 
 .box-b p {
@@ -220,7 +228,7 @@ header {
 }
 
 .box-c img {
-  max-width: 270px;
+  max-width: 250px;
   margin: 2rem auto;
 }
 
@@ -246,6 +254,10 @@ article.grid-col-2 {
   gap: 5rem;
 }
 
+.box-e.grid-col-2 {
+  align-items: start;
+}
+
 .grid-col-2b {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -257,7 +269,7 @@ article.grid-col-2 {
 .grid-col-3 {
   margin: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   row-gap: 3rem;
   align-items: center;
@@ -270,7 +282,7 @@ article.grid-col-2 {
 }
 
 .box-d .grid-col-3 img {
-  max-width: 300px;
+  max-width: 200px;
   margin: 0 auto;
   display: block;
 }
@@ -298,7 +310,7 @@ footer .grid-col-3 * {
 
 .slider-container {
   position: relative;
-  height: 650px;
+  height: 600px;
 }
 
 .slide {
@@ -582,9 +594,9 @@ span:first-of-type {
     margin: 0 5rem 0 4rem;
   }
 
-  .text-light h2 {
+  /* .text-light h2 {
     grid-row: 1;
-  }
+  } */
 
   .text-light p {
     grid-row: 2;
