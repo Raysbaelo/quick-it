@@ -65,6 +65,7 @@ textarea {
   padding: 6px 10px;
   margin-bottom: 10px;
   width: 300px;
+  font-family: "Poppins";
 }
 
 input[type="text"],
@@ -189,7 +190,7 @@ header {
 .box-b h2 {
   grid-column: 1/-1;
   font-size: 2rem;
-  margin-left: 10%;
+  margin: 0 auto;
 }
 
 .box-b p {
@@ -219,7 +220,7 @@ header {
 }
 
 .box-c img {
-  max-width: 300px;
+  max-width: 270px;
   margin: 2rem auto;
 }
 
@@ -301,6 +302,13 @@ footer .grid-col-3 * {
   height: fit-content;
   margin: 0 auto;
   width: 100%;
+}
+
+.slide p {
+  font-size: 20px;
+  background-color: var(--color-light);
+  border-radius: 25px;
+  padding: 20px;
 }
 
 .hideme {
@@ -486,8 +494,7 @@ span:first-of-type {
   .navbar,
   .box-a,
   .box-c,
-  .box-e,
-  main.bg-primary {
+  .box-e {
     max-width: 1440px;
     margin-right: auto;
     margin-left: auto;
