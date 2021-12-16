@@ -485,16 +485,24 @@ span:first-of-type {
 .restaurantGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  height: auto;
   margin: 1rem 20rem 1rem 20rem;
   gap: 1rem;
 }
 
 .restaurant {
   position: relative;
-  width: fit-content;
-  display: inline-block;
+  /* height: fit-content;
+  display: block; */
   background: black;
   overflow: hidden;
+  height: auto;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.restaurant:hover {
+  background-color: #666;
 }
 
 .restaurantBackground {
@@ -503,12 +511,15 @@ span:first-of-type {
   height: 30rem;
   object-fit: cover;
   opacity: 0.4;
+  margin: 0;
 }
+
 .restaurantLogo {
   position: absolute;
   width: 10rem;
-  left: 20%;
-  top: 30%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .restaurantName {
@@ -517,6 +528,7 @@ span:first-of-type {
   left: 20%;
   top: 60%;
   font-size: 2rem;
+  margin: 0;
 }
 
 /* MEDIA QUERIES */

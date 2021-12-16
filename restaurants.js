@@ -32,7 +32,7 @@ function showRestaurant(restaurant) {
     restaurant._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
   clone.querySelector(".restaurantLogo").src = `http://agata.dk/qui/${restaurant.id}.png`;
   console.log(`http://agata.dk/qui/${restaurant.id}.png`);
-  clone.querySelector(".restaurantName").textContent = restaurant.title.rendered;
+  // clone.querySelector(".restaurantName").textContent = restaurant.title.rendered;
 
   const parent = document.querySelector(".restaurantGrid");
   parent.appendChild(clone);
