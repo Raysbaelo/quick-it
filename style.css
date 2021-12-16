@@ -36,7 +36,7 @@ h2 {
 }
 
 h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 p {
@@ -113,7 +113,8 @@ header {
   width: 80%;
   /* max-width: 1000px; */
   height: auto;
-  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%), 0 0 2px rgb(0 0 0 / 7%);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%),
+    0 0 2px rgb(0 0 0 / 7%);
   border: 2px solid var(--color-primary);
   border-radius: 50px;
   padding: 10px;
@@ -367,7 +368,8 @@ footer .grid-col-3 * {
   text-align: center;
   text-decoration: none;
   background-color: var(--color-primary);
-  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%), 0 0 2px rgb(0 0 0 / 7%);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%),
+    0 0 2px rgb(0 0 0 / 7%);
 }
 
 .btn:hover {
@@ -475,7 +477,8 @@ span:first-of-type {
   width: 90%;
   height: 100%;
   padding: 30px;
-  box-shadow: inset 0 4px 3px -3px rgb(0 0 0 / 10%), inset 0 4px 2px -2px rgb(0 0 0 / 7%);
+  box-shadow: inset 0 4px 3px -3px rgb(0 0 0 / 10%),
+    inset 0 4px 2px -2px rgb(0 0 0 / 7%);
   transition: all 0.3s;
   z-index: 10;
 }
