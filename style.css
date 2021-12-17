@@ -80,7 +80,7 @@ textarea {
 
 input[type="text"],
 input[type="text"] {
-  border: 0;
+  border: 2px transparent solid;
   border-bottom: 1px solid var(--color-dark);
 }
 
@@ -390,10 +390,11 @@ footer .grid-col-3 * {
 
 input.btn {
   padding: 6px 15px;
+  border: 2px solid var(--color-secondary);
 }
 
 input.btn:hover {
-  outline: 2px solid #fff;
+  border: 2px solid #fff;
 }
 
 /* .buttons {
