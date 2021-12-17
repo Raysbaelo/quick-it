@@ -640,6 +640,16 @@ span:first-of-type {
   padding: 0;
 }
 
+.first_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first_section h4 {
+  padding-top: 2rem;
+}
+
 /* MEDIA QUERIES */
 @media screen and (min-width: 1440px) {
   .box-a img {
