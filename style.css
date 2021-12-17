@@ -566,7 +566,8 @@ span:first-of-type {
 
 .hidden {
   transform: translateX(100%);
-  display: none;
+opacity: 0;
+  transition: all 0s;
 }
 
 .no-scroll {
