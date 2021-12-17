@@ -38,6 +38,14 @@ function showRestaurant(restaurant) {
   const parent = document.querySelector(".restaurantGrid");
   parent.appendChild(clone);
 
+  //replacing unicode characters
+  function parseHtmlEnteties(str) {
+    return str.replace(/&#([0-9]{1,4});/gi, function (match, numStr) {
+      var num = parseInt(numStr, 10); // read num as normal number
+      return String.fromCharCode(num);
+    });
+  }
+
   function addToMap() {
     var pos = { lat: Number(restaurant.latitude), lng: Number(restaurant.longitude) };
     var marker = new google.maps.Marker({
@@ -65,7 +73,7 @@ function showRestaurant(restaurant) {
     infowincontent.appendChild(infowindiv);
 
     var name = document.createElement("h2");
-    name.textContent = restaurant.title.rendered;
+    name.textContent = parseHtmlEnteties(restaurant.title.rendered);
     name.style.color = "white";
     name.style.marginBottom = "0.2rem";
     infowindiv.appendChild(name);
