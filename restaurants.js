@@ -54,8 +54,7 @@ function showRestaurant(restaurant) {
     var img = document.createElement("img");
     img.src = `http://agata.dk/qui/${restaurant.id}.png`;
     img.style.width = "40%";
-    img.style.height - "auto";
-    img.style.margin = "1rem";
+    img.style.maxHeight = "100%";
     infowincontent.appendChild(img);
 
     var infowindiv = document.createElement("div");
