@@ -374,7 +374,7 @@ footer .grid-col-3 * {
   color: #fff;
   border: none;
   border-radius: 25px;
-  padding: 9px 20px;
+  padding: 10px 20px;
   line-height: 1.2;
   text-align: center;
   text-decoration: none;
@@ -396,10 +396,10 @@ input.btn:hover {
   border: 2px solid #fff;
 }
 
-/* .buttons {
+.buttons {
   display: flex;
   flex-direction: column;
-} */
+}
 
 /* BACKGROUNDS */
 .bg-primary {
