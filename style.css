@@ -289,7 +289,7 @@ article.grid-col-2 {
 
 .box-b .grid-col-3 img {
   max-width: 100px;
-  justify-self: center;
+  justify-self: end;
 }
 
 .box-d .grid-col-3 {
@@ -437,6 +437,14 @@ footer {
 span:first-of-type {
   color: var(--color-secondary);
   display: block;
+}
+
+.footerInteraction:hover {
+  transform: scale(1.2);
+}
+
+.emailAddress {
+  color: white !important;
 }
 
 /* BURGER MENU ICON */
