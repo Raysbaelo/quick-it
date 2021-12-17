@@ -432,6 +432,14 @@ span:first-of-type {
   display: block;
 }
 
+.footerInteraction:hover {
+  transform: scale(1.2);
+}
+
+.emailAddress {
+  color: white !important;
+}
+
 /* BURGER MENU ICON */
 .burger {
   cursor: pointer;
