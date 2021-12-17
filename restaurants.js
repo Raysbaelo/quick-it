@@ -54,19 +54,20 @@ function showRestaurant(restaurant) {
     var img = document.createElement("img");
     img.src = `http://agata.dk/qui/${restaurant.id}.png`;
     img.style.width = "40%";
-    img.style.maxHeight = "100%";
+    img.style.alignSelf = "center";
+    img.style.margin = "1rem";
     infowincontent.appendChild(img);
 
     var infowindiv = document.createElement("div");
     infowindiv.style.display = "flex";
     infowindiv.style.flexDirection = "column";
-    //infowindiv.style.margin = "2rem";
+    infowindiv.style.margin = "1rem 0.5rem 0.2rem 0";
     infowincontent.appendChild(infowindiv);
 
     var name = document.createElement("h2");
     name.textContent = restaurant.title.rendered;
     name.style.color = "white";
-    //name.style.margin = "1rem";
+    name.style.marginBottom = "0.2rem";
     infowindiv.appendChild(name);
 
     var address = document.createElement("p");
