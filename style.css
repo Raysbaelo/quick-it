@@ -636,7 +636,7 @@ opacity: 0;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   height: auto;
   gap: 1rem;
-  margin: 1rem 20rem 1rem 20rem;
+  margin: 1rem 13rem 1rem 13rem;
 }
 
 .restaurant {
