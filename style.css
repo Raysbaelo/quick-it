@@ -188,12 +188,41 @@ header {
 
 /* BOX */
 
+.box-images{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
 .box-a img,
-.box-text {
+.box-text
+{
   max-width: 500px;
   margin: 0 auto;
   justify-self: center;
   /* padding: 20px 0; */
+}
+
+.box-a img{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#animated_text{
+  position: absolute;
+  left: 0px;
+  top: 0;
+  animation: rotation 30s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 .box-c .box-text {
