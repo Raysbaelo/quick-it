@@ -25,7 +25,6 @@ var openedMarker;
 
 function showRestaurant(restaurant) {
   addToMap();
-  console.log(restaurant.id);
   const template = document.querySelector("template").content;
   const clone = template.cloneNode(true);
 
@@ -33,7 +32,6 @@ function showRestaurant(restaurant) {
   clone.querySelector(".restaurantBackground").src =
     restaurant._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
   clone.querySelector(".restaurantLogo").src = `https://agata.dk/qui/${restaurant.id}.png`;
-  // clone.querySelector(".restaurantName").textContent = restaurant.title.rendered;
 
   const parent = document.querySelector(".restaurantGrid");
   parent.appendChild(clone);
