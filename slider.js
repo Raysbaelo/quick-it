@@ -1,63 +1,42 @@
 // management app - step 1,2,3,4
+//buttons
 const step1 = document.getElementById("step1");
 const step2 = document.getElementById("step2");
 const step3 = document.getElementById("step3");
 const step4 = document.getElementById("step4");
 
+//first step content
 const stepA = document.getElementById("stepA");
-const stepB = document.getElementById("stepB");
-const stepC = document.getElementById("stepC");
-const stepD = document.getElementById("stepD");
 
-function getStepA() {
-  stepA.classList.remove("hideme");
-  stepA.classList.add("z-index");
-  stepD.classList.add("hideme");
-  stepB.classList.add("hideme");
-  stepC.classList.add("hideme");
-  step4.classList.remove("selected");
-  step2.classList.remove("selected");
-  step3.classList.remove("selected");
-  step1.classList.add("selected");
+var previousNumber = step1;
+var previousLetter = stepA;
+
+function getStep(letter) {
+  previousNumber.classList.remove("selected");
+  previousLetter.classList.add("hideme");
+
+  var selectedStep = document.getElementById("step" + letter);
+  selectedStep.classList.remove("hideme");
+  selectedStep.classList.add("z-index");
+
+  //char code for A is 65, so to get 1 we have to have char code from A - 64
+  //char code for B is 66, so to get 2 we have to have char code from B - 64, etc.
+  selectedStepNumber = document.getElementById("step" + (letter.charCodeAt() - 64));
+  selectedStepNumber.classList.add("selected");
+
+  previousNumber = selectedStepNumber;
+  previousLetter = selectedStep;
 }
 
-function getStepB() {
-  stepB.classList.remove("hideme");
-  stepB.classList.add("z-index");
-  stepA.classList.add("hideme");
-  stepD.classList.add("hideme");
-  stepC.classList.add("hideme");
-  step1.classList.remove("selected");
-  step4.classList.remove("selected");
-  step3.classList.remove("selected");
-  step2.classList.add("selected");
-}
-
-function getStepC() {
-  stepC.classList.remove("hideme");
-  stepC.classList.add("z-index");
-  stepA.classList.add("hideme");
-  stepB.classList.add("hideme");
-  stepD.classList.add("hideme");
-  step1.classList.remove("selected");
-  step2.classList.remove("selected");
-  step4.classList.remove("selected");
-  step3.classList.add("selected");
-}
-
-function getStepD() {
-  stepD.classList.remove("hideme");
-  stepD.classList.add("z-index");
-  stepA.classList.add("hideme");
-  stepB.classList.add("hideme");
-  stepC.classList.add("hideme");
-  step1.classList.remove("selected");
-  step2.classList.remove("selected");
-  step3.classList.remove("selected");
-  step4.classList.add("selected");
-}
-
-step1.addEventListener("click", getStepA);
-step2.addEventListener("click", getStepB);
-step3.addEventListener("click", getStepC);
-step4.addEventListener("click", getStepD);
+step1.addEventListener("click", function () {
+  getStep("A");
+});
+step2.addEventListener("click", function () {
+  getStep("B");
+});
+step3.addEventListener("click", function () {
+  getStep("C");
+});
+step4.addEventListener("click", function () {
+  getStep("D");
+});
