@@ -239,16 +239,6 @@ header {
   font-size: 1.5rem;
 }
 
-/* .box-c img {
-  max-width: 250px;
-  place-self: end;
-} */
-
-/* .box-c .box-text {
-  margin: 0;
-  justify-self: start;
-} */
-
 .arrow {
   z-index: 100;
   font-size: 2rem;
@@ -256,9 +246,8 @@ header {
   cursor: pointer;
   padding: 0 10px;
   background-color: var(--color-primary);
-  /* margin-right: 10px; */
   position: absolute;
-  right: 0;
+  right: 1vw;
   bottom: 0;
 }
 
@@ -271,18 +260,6 @@ transform: scale(1.3);
   position: relative;
 }
 
-/* .box-d.bg-primary::before {
-  content: "";
-  position: absolute;
-  height: 100px;
-  bottom: -90px;
-  right: 0;
-  left: 0;
-  z-index: -10;
-  background-color: var(--color-secondary);
-  transform: skewY(30deg);
-  opacity: 0.6;
-} */
 .box-d.bg-primary::before,
 .box-d.bg-primary::after {
   content: "";

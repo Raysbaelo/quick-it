@@ -1,42 +1,44 @@
-// management app - step 1,2,3,4
-//buttons
-const step1 = document.getElementById("step1");
-const step2 = document.getElementById("step2");
-const step3 = document.getElementById("step3");
-const step4 = document.getElementById("step4");
+// slider
+const nextBtn = document.querySelector(".next-btn");
+const prevBtn = document.querySelector(".prev-btn");
+const slides = document.querySelectorAll(".slide");
+const slideIcons = document.querySelectorAll(".slide-icon");
+const numberOfSlides = slides.length;
+let slideNumber = 0;
 
-//first step content
-const stepA = document.getElementById("stepA");
+// image slider next button
+nextBtn.addEventListener("click", () => {
+  slides.forEach((slide) => {
+    slide.classList.remove("active");
+  });
+  slideIcons.forEach((slideIcon) => {
+    slideIcon.classList.remove("active");
+  });
 
-let previousNumber = step1;
-let previousLetter = stepA;
+  slideNumber++;
 
-function getStep(letter) {
-  previousNumber.classList.remove("selected");
-  previousLetter.classList.add("hideme");
-
-  let selectedStep = document.getElementById("step" + letter);
-  selectedStep.classList.remove("hideme");
-  selectedStep.classList.add("z-index");
-
-  //char code for A is 65, so to get 1 we have to have char code from A - 64
-  //char code for B is 66, so to get 2 we have to have char code from B - 64, etc.
-  selectedStepNumber = eval("step" + (letter.charCodeAt() - 64));
-  selectedStepNumber.classList.add("selected");
-
-  previousNumber = selectedStepNumber;
-  previousLetter = selectedStep;
-}
-
-step1.addEventListener("click", function () {
-  getStep("A");
+  if (slideNumber > numberOfSlides - 1) {
+    slideNumber = 0;
+  }
+  slides[slideNumber].classList.add("active");
+  slideIcons[slideNumber].classList.add("active");
 });
-step2.addEventListener("click", function () {
-  getStep("B");
-});
-step3.addEventListener("click", function () {
-  getStep("C");
-});
-step4.addEventListener("click", function () {
-  getStep("D");
+
+// image slider previous button
+prevBtn.addEventListener("click", () => {
+  slides.forEach((slide) => {
+    slide.classList.remove("active");
+  });
+  slideIcons.forEach((slideIcon) => {
+    slideIcon.classList.remove("active");
+  });
+
+  slideNumber--;
+
+  if (slideNumber < 0) {
+    slideNumber = numberOfSlides - 1;
+  }
+
+  slides[slideNumber].classList.add("active");
+  slideIcons[slideNumber].classList.add("active");
 });
