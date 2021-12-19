@@ -893,6 +893,11 @@ span:first-of-type {
   .restaurantBackground {
     height: 15rem;
   }
+
+  input:not(input.btn),
+  textarea {
+    width: fit-content;
+  }
 }
 
 /* @media (max-width: 700px) {
