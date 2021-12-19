@@ -9,3 +9,12 @@ function navToggle() {
 }
 
 btn.addEventListener("click", navToggle);
+
+//change color of "for business" button
+const forBusiness = document.getElementById("forBusiness");
+if (window.location.href.includes("#app")) {
+  forBusiness.classList.add("selected");
+}
+forBusiness.addEventListener("click", function () {
+  forBusiness.classList.add("selected");
+});
