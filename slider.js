@@ -8,14 +8,14 @@ const step4 = document.getElementById("step4");
 //first step content
 const stepA = document.getElementById("stepA");
 
-var previousNumber = step1;
-var previousLetter = stepA;
+let previousNumber = step1;
+let previousLetter = stepA;
 
 function getStep(letter) {
   previousNumber.classList.remove("selected");
   previousLetter.classList.add("hideme");
 
-  var selectedStep = document.getElementById("step" + letter);
+  let selectedStep = document.getElementById("step" + letter);
   selectedStep.classList.remove("hideme");
   selectedStep.classList.add("z-index");
 
