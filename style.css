@@ -100,13 +100,8 @@ article.box-text section p {
 }
 
 figcaption {
-  text-transform: uppercase;
-  font-size: 1.5rem;
+  max-width: 270px;
   text-align: center;
-}
-
-figcaption:hover {
-  color: var(--color-secondary);
 }
 
 /* NAVBAR */
@@ -188,28 +183,27 @@ header {
 
 /* BOX */
 
-.box-images{
+.box-images {
   position: relative;
   top: 0;
   left: 0;
 }
 
 .box-a img,
-.box-text
-{
+.box-text {
   max-width: 500px;
   margin: 0 auto;
   justify-self: center;
   /* padding: 20px 0; */
 }
 
-.box-a img{
+.box-a img {
   position: relative;
   top: 0;
   left: 0;
 }
 
-#animated_text{
+#animated_text {
   position: absolute;
   left: 0px;
   top: 0;
@@ -242,12 +236,16 @@ header {
   display: block;
 } */
 
+.box-f h3 {
+  text-align: center;
+}
+
 .box-f .flex {
   gap: 5rem;
   justify-content: center;
 }
 
-.box-text p,
+.box-f p .box-text p,
 .box-text .btn {
   margin-top: 20px;
 }
@@ -595,7 +593,7 @@ span:first-of-type {
 
 .hidden {
   transform: translateX(100%);
-opacity: 0;
+  opacity: 0;
   transition: all 0s;
 }
 
@@ -749,7 +747,7 @@ opacity: 0;
   }
 
   .box-f img {
-    max-width: 270px;
+    max-width: 300px;
   }
 
   .restaurantGrid {
