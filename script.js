@@ -21,7 +21,7 @@ forBusiness.addEventListener("click", function () {
 
 // slider
 const nextBtn = document.querySelector(".next-btn");
-const prevBtn = document.querySelector("prev-btn");
+const prevBtn = document.querySelector(".prev-btn");
 const slides = document.querySelectorAll(".slide");
 const slideIcons = document.querySelectorAll(".slide-icon");
 const numberOfSlides = slides.length;
@@ -45,13 +45,13 @@ nextBtn.addEventListener("click", () => {
   slideIcons[slideNumber].classList.add("active");
 });
 
-// image slider previous button  
-prevBtn.addEventListener('click', () => {
+// image slider previous button
+prevBtn.addEventListener("click", () => {
   slides.forEach((slide) => {
-    slide.classList.remove('active');
+    slide.classList.remove("active");
   });
   slideIcons.forEach((slideIcon) => {
-    slideIcon.classList.remove('active');
+    slideIcon.classList.remove("active");
   });
 
   slideNumber--;
@@ -60,7 +60,6 @@ prevBtn.addEventListener('click', () => {
     slideNumber = numberOfSlides - 1;
   }
 
-  slides[slideNumber].classList.add('active');
-  slideIcons[slideNumber].classList.add('active');
-
+  slides[slideNumber].classList.add("active");
+  slideIcons[slideNumber].classList.add("active");
 });

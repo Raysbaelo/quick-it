@@ -256,7 +256,6 @@ header {
   color: var(--color-primary);
 }
 
-
 .box-d.bg-primary {
   width: 100%;
   position: relative;
@@ -392,7 +391,6 @@ footer .grid-col-3 * {
   width: 100%;
   height: fit-content;
 }
-
 
 .slider-container {
   position: relative;
@@ -944,6 +942,7 @@ section.box-c {
 }
 
 .box-c {
+  /* height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1066,8 +1065,8 @@ section.box-c {
 
   .slider-container {
     min-height: 700px;
-}
-.navigation{
-  height: 520px
-}
+  }
+  .navigation {
+    height: 520px;
+  }
 }
