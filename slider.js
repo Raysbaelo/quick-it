@@ -21,7 +21,7 @@ function getStep(letter) {
 
   //char code for A is 65, so to get 1 we have to have char code from A - 64
   //char code for B is 66, so to get 2 we have to have char code from B - 64, etc.
-  selectedStepNumber = document.getElementById("step" + (letter.charCodeAt() - 64));
+  selectedStepNumber = eval("step" + (letter.charCodeAt() - 64));
   selectedStepNumber.classList.add("selected");
 
   previousNumber = selectedStepNumber;
