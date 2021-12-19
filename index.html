@@ -7,6 +7,7 @@
     <meta name="robots" content="noindex" />
     <title>Quickit</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   </head>
   <body>
     <header>
@@ -133,19 +134,19 @@
 
       <!-- Box C Management app -->
       <section class="box-c">
-        <h2 id="app">Management app</h2>
+        <!-- <h2 id="app">Management app</h2>
         <p>Management app is for waiters and restaurant staff where all the Quickit orders will pop up.</p>
         <div class="slider-click">
           <a class="selected" id="step1">Step 1 <br><em>Accept order</em></a>
           <a id="step2">Step 2<br><em>Print ticket</em></a>
           <a id="step3">Step 3<br><em>Mark as done</em></a>
           <a id="step4" >Step 4<br><em>Serve</em></a>
-        </div>
+        </div> -->
 
         <div class="slider-container">
-          <div id=stepA class="grid-col-2 slide">
+          <div id=stepA class="grid-col-2 slide active">
             <img id="anchor1" src="img/app1.webp" alt="">
-              <div class="box-text">
+              <div class="info box-text">
                 <span>Step 1</span>
                 <p>Accept or decline the order...</p>
               </div>
@@ -176,6 +177,16 @@
               <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
             </svg>
           </a>
+          <div class="navigation">
+            <i class="fas fa-chevron-left prev-btn"></i>
+<i class="fas fa-chevron-right next-btn"></i>
+          </div>
+          <div class="navigation-visibility">
+            <div class="slide-icon active"></div>
+             <div class="slide-icon"></div>
+              <div class="slide-icon"></div>
+               <div class="slide-icon"></div>
+          </div>
         </div>
       </section>
 
