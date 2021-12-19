@@ -266,7 +266,7 @@ header {
   position: relative;
 }
 
-.box-d.bg-primary::before {
+/* .box-d.bg-primary::before {
   content: "";
   position: absolute;
   height: 100px;
@@ -277,18 +277,18 @@ header {
   background-color: var(--color-secondary);
   transform: skewY(30deg);
   opacity: 0.6;
-}
-/* .box-d.bg-primary::before, */
+} */
+.box-d.bg-primary::before,
 .box-d.bg-primary::after {
   content: "";
   position: absolute;
-  height: 100px;
-  bottom: -90px;
+  height: 200px;
+  bottom: -70px;
   right: 0;
   left: 0;
   z-index: -10;
   background-color: var(--color-secondary);
-  transform: skewY(20deg);
+  transform: skewY(-3deg);
 }
 
 .box-e {
