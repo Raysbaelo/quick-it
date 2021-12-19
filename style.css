@@ -79,15 +79,15 @@ textarea {
 }
 
 input[type="text"],
-input[type="text"],
+input[type="email"],
 textarea {
   border: 2px transparent solid;
 }
 
 input:focus,
 textarea:focus {
-  outline: 0.5px solid var(--color-secondary);
-  border: none;
+  border: 2px solid var(--color-secondary);
+  outline: none;
 }
 
 input:hover,
@@ -101,13 +101,9 @@ article.box-text section p {
 }
 
 figcaption {
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-figcaption:hover {
-  color: var(--color-secondary);
+  max-width: 270px;
+  height: 130px;
+  /* text-align: center; */
 }
 
 /* NAVBAR */
@@ -122,7 +118,8 @@ header {
   width: 80%;
   /* max-width: 1000px; */
   height: auto;
-  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%), 0 0 2px rgb(0 0 0 / 7%);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%),
+    0 0 2px rgb(0 0 0 / 7%);
   border: 2px solid var(--color-primary);
   border-radius: 50px;
   padding: 10px;
@@ -224,37 +221,6 @@ header {
   }
 }
 
-.box-c .box-text {
-  margin: 0;
-  justify-self: start;
-}
-
-.box-e img {
-  max-width: 350px;
-  place-self: center;
-}
-
-/* .box-f img {
-  max-width: 200px;
-  place-self: center;
-  margin: 0 auto;
-  display: block;
-} */
-
-.box-f .flex {
-  gap: 5rem;
-  justify-content: center;
-}
-
-.box-text p,
-.box-text .btn {
-  margin-top: 20px;
-}
-
-.box-text input.btn {
-  margin-top: 0;
-}
-
 .box-a em {
   color: var(--color-primary);
   font-style: normal;
@@ -262,40 +228,6 @@ header {
 
 .box-b h2 {
   text-align: center;
-}
-
-/* .box-b p {
-  margin-top: 1rem;
-} */
-
-.box-d.bg-primary {
-  width: 100%;
-  position: relative;
-}
-
-.box-d.bg-primary::before {
-  content: "";
-  position: absolute;
-  height: 100px;
-  bottom: -90px;
-  right: 0;
-  left: 0;
-  z-index: -10;
-  background-color: var(--color-secondary);
-  transform: skewY(30deg);
-  opacity: 0.6;
-}
-/* .box-d.bg-primary::before, */
-.box-d.bg-primary::after {
-  content: "";
-  position: absolute;
-  height: 100px;
-  bottom: -90px;
-  right: 0;
-  left: 0;
-  z-index: -10;
-  background-color: var(--color-secondary);
-  transform: skewY(20deg);
 }
 
 .box-c span {
@@ -307,9 +239,87 @@ header {
   place-self: end;
 }
 
+.box-c .box-text {
+  margin: 0;
+  justify-self: start;
+}
+
+.arrow {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: var(--color-primary);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+}
+
+.box-d.bg-primary {
+  width: 100%;
+  position: relative;
+}
+
+/* .box-d.bg-primary::before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -90px;
+  right: 0;
+  left: 0;
+  z-index: -10;
+  background-color: var(--color-secondary);
+  transform: skewY(30deg);
+  opacity: 0.6;
+} */
+.box-d.bg-primary::before,
+.box-d.bg-primary::after {
+  content: "";
+  position: absolute;
+  height: 200px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  z-index: -10;
+  background-color: var(--color-secondary);
+  transform: skewY(-3deg);
+}
+
 .box-e {
   margin-left: 2rem;
   margin-bottom: 30px;
+}
+
+.box-e img {
+  max-width: 350px;
+  place-self: center;
+}
+
+.box-f h3 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.box-f .flex {
+  gap: 5rem;
+  justify-content: center;
+}
+
+.box-f p .box-text p,
+.box-text .btn {
+  margin-top: 20px;
+}
+
+.box-text input.btn {
+  margin-top: 0;
 }
 
 /* GRID STYLES */
@@ -447,7 +457,8 @@ footer .grid-col-3 * {
   text-align: center;
   text-decoration: none;
   background-color: var(--color-primary);
-  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%), 0 0 2px rgb(0 0 0 / 7%);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%),
+    0 0 2px rgb(0 0 0 / 7%);
 }
 
 .btn:hover {
@@ -569,7 +580,8 @@ span:first-of-type {
   width: 90%;
   height: 100%;
   padding: 30px;
-  box-shadow: inset 0 4px 3px -3px rgb(0 0 0 / 10%), inset 0 4px 2px -2px rgb(0 0 0 / 7%);
+  box-shadow: inset 0 4px 3px -3px rgb(0 0 0 / 10%),
+    inset 0 4px 2px -2px rgb(0 0 0 / 7%);
   transition: all 0.6s;
   z-index: 10;
 }
@@ -746,7 +758,7 @@ span:first-of-type {
   }
 
   .box-f img {
-    max-width: 270px;
+    max-width: 300px;
   }
 
   .restaurantGrid {
@@ -891,6 +903,11 @@ span:first-of-type {
   }
   .restaurantBackground {
     height: 15rem;
+  }
+
+  input:not(input.btn),
+  textarea {
+    width: fit-content;
   }
 }
 
