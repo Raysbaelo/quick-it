@@ -219,41 +219,6 @@ header {
   }
 }
 
-.box-c .box-text {
-  margin: 0;
-  justify-self: start;
-}
-
-.box-e img {
-  max-width: 350px;
-  place-self: center;
-}
-
-/* .box-f img {
-  max-width: 200px;
-  place-self: center;
-  margin: 0 auto;
-  display: block;
-} */
-
-.box-f h3 {
-  text-align: center;
-}
-
-.box-f .flex {
-  gap: 5rem;
-  justify-content: center;
-}
-
-.box-f p .box-text p,
-.box-text .btn {
-  margin-top: 20px;
-}
-
-.box-text input.btn {
-  margin-top: 0;
-}
-
 .box-a em {
   color: var(--color-primary);
   font-style: normal;
@@ -263,9 +228,38 @@ header {
   text-align: center;
 }
 
-/* .box-b p {
-  margin-top: 1rem;
-} */
+.box-c span {
+  font-size: 1.5rem;
+}
+
+.box-c img {
+  max-width: 250px;
+  place-self: end;
+}
+
+.box-c .box-text {
+  margin: 0;
+  justify-self: start;
+}
+
+.arrow {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: var(--color-primary);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+}
 
 .box-d.bg-primary {
   width: 100%;
@@ -297,18 +291,32 @@ header {
   transform: skewY(20deg);
 }
 
-.box-c span {
-  font-size: 1.5rem;
-}
-
-.box-c img {
-  max-width: 250px;
-  place-self: end;
-}
-
 .box-e {
   margin-left: 2rem;
   margin-bottom: 30px;
+}
+
+.box-e img {
+  max-width: 350px;
+  place-self: center;
+}
+
+.box-f h3 {
+  text-align: center;
+}
+
+.box-f .flex {
+  gap: 5rem;
+  justify-content: center;
+}
+
+.box-f p .box-text p,
+.box-text .btn {
+  margin-top: 20px;
+}
+
+.box-text input.btn {
+  margin-top: 0;
 }
 
 /* GRID STYLES */
