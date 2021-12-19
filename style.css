@@ -102,7 +102,8 @@ article.box-text section p {
 
 figcaption {
   max-width: 270px;
-  text-align: center;
+  height: 130px;
+  /* text-align: center; */
 }
 
 /* NAVBAR */
@@ -304,6 +305,7 @@ header {
 
 .box-f h3 {
   text-align: center;
+  margin-top: 10px;
 }
 
 .box-f .flex {
