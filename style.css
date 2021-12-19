@@ -250,10 +250,13 @@ header {
 } */
 
 .arrow {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  color: var(--color-primary);
+  z-index: 100;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  background-color: var(--color-primary);
+  margin-right: 10px;
 }
 
 .box-d.bg-primary {
@@ -1001,7 +1004,7 @@ section.box-c {
 }
 
 .navigation {
-  height: 500px;
+  height: 450px;
   display: flex;
   align-items: center;
   justify-content: space-between;
