@@ -595,13 +595,13 @@ section.box-c {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+  opacity: 1;
+  /* transition: opacity 0.5s ease; */
 }
 
-.slider-container:hover .navigation {
+/* .slider-container:hover .navigation {
   opacity: 1;
-}
+} */
 
 .prev-btn,
 .next-btn {
