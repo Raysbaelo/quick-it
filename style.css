@@ -274,6 +274,7 @@ header {
 }
 
 .box-e {
+  margin-left: 2rem;
   margin-bottom: 30px;
 }
 
@@ -906,6 +907,10 @@ section.box-c {
 
   .box-c {
     display: flex;
+  }
+
+  .box-e {
+    margin-left: 0;
   }
 
   .box-f .flex {
